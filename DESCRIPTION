@@ -1,0 +1,70 @@
+Package: covidestim
+Title: Real-time Bayesian forcasting of R_t
+Version: 0.1.1.0000
+Authors@R: 
+    c(person("Marcus", "Russi",  
+             role = c("aut", "cre"),            
+             email = "marcus.russi@yale.edu",
+             comment = c(ORCID = "0000-0002-7106-068X")),
+      person("Melanie", "Chitwood",
+             role = c("aut"),
+             email = "melanie.chitwood@yale.edu",
+             comment = c(ORCID = "0000-0002-9289-5694")))
+Description: covidestim is a Bayesian nowcasting approach that explicitly
+  accounts for reporting delays and secular changes in case ascertainment to
+  generate real-time estimates of COVID-19 epidemiology on the basis of reported
+  cases and deaths. Using this approach, we can estimate time trends in
+  infections, symptomatic cases, and deaths for all 50 US states and the District
+  of Columbia from early-March 2020 through the present. The covidestim package
+  contains all you need to reproduce our work, but it’s really targeted at users
+  who want to try running our model on their own state- or county-level data.
+URL: https://covidestim.org, https://github.com/covidestim, https://pkg.covidestim.org
+BugReports: https://github.com/covidestim/covidestim/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Imports:
+    assertthat,
+    ggplot2,
+    glue,
+    Hmisc,
+    lubridate,
+    magrittr,
+    methods,
+    parallel,
+    plyr,
+    purrr,
+    furrr,
+    future,
+    Rcpp (>= 1.0.4.6),
+    RcppParallel (>= 5.0.1),
+    Rdpack,
+    rlang,
+    rstan (>= 2.19.3),
+    rstantools (>= 2.1.1),
+    splines,
+    stats,
+    stringr,
+    tibble,
+    tidyr,
+    R.utils
+Suggests: 
+    testthat,
+    grDevices,
+    knitr,
+    rmarkdown
+RoxygenNote: 7.1.1
+RdMacros: Rdpack
+Depends: 
+    R (>= 3.4.0)
+LinkingTo:
+    BH (>= 1.66.0),
+    Rcpp (>= 0.12.0),
+    RcppEigen (>= 0.3.3.3.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    StanHeaders (>= 2.18.0)
+SystemRequirements: GNU make
+Biarch: true
+VignetteBuilder: knitr
